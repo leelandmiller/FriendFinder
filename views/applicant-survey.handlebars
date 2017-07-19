@@ -1,0 +1,81 @@
+<style>
+    .hero-margin {
+        margin-bottom: 20px;
+    }
+</style>
+
+<section class="hero is-primary is-bold is-small hero-margin">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title">Applicant Survey</h1>
+            <h2 class="subtitle">Match With Potential Employers</h2>
+        </div>
+    </div>
+</section>
+
+<div class="columns">
+    <div class="column is-half is-offset-one-quarter">
+        <h2 class="subtitle">Fill Out the Form: </h2>
+        <form method="POST">
+            <div class="field">
+                <label class="label">{{name}}</label>
+                <div class="control">
+                    <input class="input is-medium" type="text" placeholder="{{name}}">
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">{{img}}</label>
+                <div class="control">
+                    <input class="input is-medium" type="text" placeholder="{{img}}">
+                </div>
+            </div>
+
+            <h2 class="subtitle">What Are You Looking for in a Company?</h2>
+
+            <div class="columns">
+                {{#each row1Questions}}
+                    <div class="column">
+                        <div class="field">
+                            <label class="label">{{label}}</label>
+                            <div class="control">
+                                <div class="select">
+                                    <select>
+                                        {{#each options}}
+                                            <<option>{{this}}</option>
+                                        {{/each}}
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
+
+            <div class="columns">
+                {{#each row2Questions}}
+                    <div class="column">
+                        <div class="field">
+                            <label class="label">{{label}}</label>
+                            <div class="control">
+                                <div class="select">
+                                    <select>
+                                        {{#each options}}
+                                            <option>{{this}}</option>
+                                        {{/each}}
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
+
+            <div class="field">
+                <div class="control">
+                    <button class="button is-primary">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
