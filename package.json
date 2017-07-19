@@ -1,7 +1,7 @@
 {
-  "name": "friendfinder",
+  "name": "jobfinder",
   "version": "1.0.0",
-  "description": "Friend Finder built using Node & Express",
+  "description": "Job Finder built using Node & Express",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/leelandmiller/FriendFinder.git"
+    "url": "git+https://github.com/leelandmiller/JobFinder.git"
   },
   "keywords": [
     "node",
@@ -20,9 +20,9 @@
   "author": "LeelandMiller",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/leelandmiller/FriendFinder/issues"
+    "url": "https://github.com/leelandmiller/JobFinder/issues"
   },
-  "homepage": "https://github.com/leelandmiller/FriendFinder#readme",
+  "homepage": "https://github.com/leelandmiller/JobFinder#readme",
   "dependencies": {
     "body-parser": "^1.17.2",
     "bootstrap": "^3.3.7",
