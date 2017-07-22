@@ -12,4 +12,10 @@ You simply fill out a quick survey form, and you are shown a list of 5 Job Appli
 
 ### Screenshots:
 
+![Alt text](/screenshots/index.png "Title")
 
+![Alt text](/screenshots/employersurvey.png "Title")
+
+![Alt text](/screenshots/applicantsurvey.png "Title")
+
+![Alt text](/screenshots/results.png "Title")
