@@ -75,4 +75,28 @@ let questions = {
     ]
 }
 
-module.exports = questions;
+let concatQuestions = questions.row1Questions.concat(questions.row2Questions);
+
+let refactorAnswers = (surveyer) => {
+    surveyer.scores = [];
+    Object.keys(surveyer).forEach((key, ind) => {
+        if (key.startsWith('row')) {
+            surveyer.scores.push(surveyer[key]);
+            delete surveyer[key];
+        }
+    });
+
+    return surveyer;
+};
+
+
+let compileScores = (surveyer) => {
+
+    scores = concatQuestions.map((question, index) => question.options.indexOf(surveyer.scores[index]) + 1);
+
+    surveyer.scores = scores;
+
+    return surveyer;
+};
+
+module.exports = { concatQuestions, questions, refactorAnswers, compileScores };

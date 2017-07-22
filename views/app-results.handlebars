@@ -1,0 +1,38 @@
+<section class="hero is-primary is-bold is-small hero-margin" style="margin-bottom:40px;">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title">Results</h1>
+            <h2 class="subtitle">Employers That Match You</h2>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <nav class="columns is-multiline">
+        {{#each top5}}
+            <div class="column is-4">
+                <div class="card">
+                    <div class="card-image">
+                        <figure class="image">
+                            <img class="center-crop" src="{{this.image}}" alt="Image">
+                        </figure>
+                    </div>
+                    <header class="card-header">
+                        <p class="card-header-title">
+                            {{inc @index}}. {{this.name}}
+                        </p>
+                    </header>
+                    <div class="card-content">
+                        <div class="content">
+                            <h4>Seeking: {{answers.[1]}} Developer</h4>
+                            <p>Position Available: {{answers.[3]}}</p>
+                            <p>
+                                Hours: {{answers.[0]}}<br> Experience: At Least {{answers.[2]}}<br> Education: {{answers.[4]}} Preferred
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </nav>
+</div>

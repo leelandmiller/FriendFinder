@@ -16,18 +16,18 @@
 <div class="columns">
     <div class="column is-half is-offset-one-quarter">
         <h2 class="subtitle">Fill Out the Form: </h2>
-        <form method="POST">
+        <form action="../api/employers/new" method="post">
             <div class="field">
                 <label class="label">{{coName}}</label>
                 <div class="control">
-                    <input class="input is-medium" type="text" placeholder="{{coName}}">
+                    <input id="name" name="name" class="input is-medium" type="text" placeholder="{{coName}}">
                 </div>
             </div>
 
             <div class="field">
                 <label class="label">{{img}}</label>
                 <div class="control">
-                    <input class="input is-medium" type="text" placeholder="{{img}}">
+                    <input id="image" name="image" class="input is-medium" type="text" placeholder="{{img}}">
                 </div>
             </div>
 
@@ -40,9 +40,9 @@
                             <label class="label">{{label}}</label>
                             <div class="control">
                                 <div class="select">
-                                    <select>
+                                    <select id="row1question{{@index}}" name="row1question{{@index}}">
                                         {{#each options}}
-                                            <<option>{{this}}</option>
+                                            <option>{{this}}</option>
                                         {{/each}}
                                     </select>
                                 </div>
@@ -59,7 +59,7 @@
                             <label class="label">{{label}}</label>
                             <div class="control">
                                 <div class="select">
-                                    <select>
+                                    <select id="row2question{{@index}}" name="row2question{{@index}}">
                                         {{#each options}}
                                             <option>{{this}}</option>
                                         {{/each}}
@@ -73,7 +73,7 @@
 
             <div class="field">
                 <div class="control">
-                    <button class="button is-primary">Submit</button>
+                    <button id="submitBtn" class="button is-primary" type="submit" value="submit">Submit</button>
                 </div>
             </div>
         </form>
